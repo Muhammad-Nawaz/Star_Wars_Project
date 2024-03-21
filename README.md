@@ -39,4 +39,6 @@ This method retrieves information about pilots associated with a given starship.
 This method iterates over the starships fetched from the Star Wars API and retrieves the MongoDB _id for each pilot associated with a starship.
 
 4. mongo_insert(self)
+
 This method inserts the starship data fetched from the Star Wars API into the MongoDB database.    
+
