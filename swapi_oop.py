@@ -46,7 +46,7 @@ class Starwars:
 
 
 class1 = Starwars()
-#print(class1.starships["results"][6]["pilots"])
+
 class1.get_pilots_id()
-print(class1.star_id)
-# class1.mongo_insert()
+
+class1.mongo_insert()
