@@ -64,10 +64,10 @@ class UnitTests(unittest.TestCase):
             "Expected `get_pilots` method to return error."
         )
 
-        def test_insert_mongo(self):
-            actual = self.sw3.db.starships.find({"name": "X-wing"}).next()
+   def test_insert_mongo(self):
+        actual = self.sw3.db.starships.find({"name": "X-wing"}).next()
 
-            expected = {'_id': ObjectId('65fc1dce1f4b37bf8f188fa9'), 'name': 'X-wing', 'model': 'T-65 X-wing',
+        expected = {'_id': ObjectId('65fc1dce1f4b37bf8f188fa9'), 'name': 'X-wing', 'model': 'T-65 X-wing',
                         'manufacturer': 'Incom Corporation', 'cost_in_credits': '149999', 'length': '12.5',
                         'max_atmosphering_speed': '1050', 'crew': '1', 'passengers': '0', 'cargo_capacity': '110',
                         'consumables': '1 week', 'hyperdrive_rating': '1.0', 'MGLT': '100',
@@ -78,7 +78,7 @@ class UnitTests(unittest.TestCase):
                                   'https://swapi.dev/api/films/3/'], 'created': '2014-12-12T11:19:05.340000Z',
                         'edited': '2014-12-20T21:23:49.886000Z', 'url': 'https://swapi.dev/api/starships/12/'}
 
-            self.assertEqual(
+        self.assertEqual(
                 actual, expected,
                 "Expected `insert_mongo` method to insert starships data into collection."
             )
