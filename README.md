@@ -17,6 +17,9 @@ swapi_test.py - Implementations of unit testing.
 The team collaboratively designed unit tests to ensure the functionality of the code that will be used for the final file. The tests included:
 
 test_get_pilots
+
 test_get_no_pilots_names
+
 test_get_non_existent_starship
+
 test_get_pilots_id
