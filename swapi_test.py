@@ -48,7 +48,6 @@ class UnitTests(unittest.TestCase):
         )
 
     def test_get_pilots_id(self):
-        # pilots = self.sw3.get_pilots_id("https://swapi.dev/api/starships/12/")["pilots"]
         self.sw3.get_pilots_id()
         actual = self.sw3.star_id
 
@@ -63,16 +62,6 @@ class UnitTests(unittest.TestCase):
             actual, expected,
             "Expected `get_pilots` method to return error."
         )
-
-        # def get_pilots_id(self):
-        #     for ship in self.starships["results"]:
-        #         updated_pilots = []
-        #         for pilot in ship["pilots"]:
-        #             star_name = self.get_pilots(pilot)["name"]
-        #             star_id = self.db.characters.find_one({"name": star_name}, {"_id": 1})
-        #             pilot = star_id["_id"]
-        #             updated_pilots.append(pilot)
-        #         ship["pilots"] = updated_pilots
 
 
 if __name__ == "__main__":

@@ -43,10 +43,6 @@ class Starwars:
     def mongo_insert(self):
         for ship in self.starships["results"]:
             self.db.starships.insert_one(ship)
+        print("Successfully inserted data into starships collection.")
 
 
-class1 = Starwars()
-#print(class1.starships["results"][6]["pilots"])
-class1.get_pilots_id()
-print(class1.star_id)
-# class1.mongo_insert()
