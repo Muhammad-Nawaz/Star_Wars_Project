@@ -14,12 +14,14 @@
 
 
 ### Introduction
-The project is to extract the 'pilots' key from the starships' data, which comprises URLs pointing to the characters who pilot these vessels. We'll then seamlessly replace these URLs with a curated list of ObjectIDs retrieved from the characters collection within our MongoDB database. This enables us to conveniently access the pilots' ObjectID list directly from the MongoDB page. To ensure precision and reliability, we've implemented thorough unit tests to validate each step of the process, guaranteeing seamless execution without errors.
+
+
+The project objective is to extract starship data from the Star Wars API website (https://swapi.dev/) and import them into an existing MongoDb Database. The 'pilots' key from the starships' data, which comprises URLs pointing to the characters who pilot these vessels will also be extracted. We'll then seamlessly replace these URLs with a curated list of ObjectIDs retrieved from the characters collection within our MongoDB database. This enables us to conveniently access the pilots' ObjectID list directly from the MongoDB page. To ensure precision and reliability, we've implemented thorough unit tests to validate each step of the process, guaranteeing seamless execution without errors.
 
 
 ### How to run the project
  
-The prerequisite libraries needed for the project are pymongo and requests. To run the project, we Git cloned our respository onto our local machines, and performed Git Pull to get the latest version of the project and to run the main.py file. We decided to produce this code in an OOP format, so the code would be well organized and link seamlessly with the Test coding. To run this program, we used the URL from the Star Wars website "swapi" to attain the data for the Starships and set this under the 'class' Starwars. We initialized this and wrote code to store the information in JSON format. The program then iterates through the information and then inserts each document into the MongoDB database.
+The prerequisite libraries needed for the project are pymongo and requests. To run the project, we Git cloned our respository onto our local machines, and performed Git Pull to get the latest version of the project and to run the main.py file. We decided to produce this code in an OOP format, so the code would be well organized and link seamlessly with the Test coding. To run this program, we used the URL from the Star Wars website "swapi" to attain the data for the Starships and set this under the 'class' Starwars. We initialised this and wrote code to store the information in JSON format. The program then iterates through the information and then inserts each document into the MongoDB database.
 
 
 ### Documents: 
@@ -44,9 +46,10 @@ The expected output is identified through looking at the starship name online e.
 
 
 2. A test that uses the get_pilots method (from the swapi_oop.py file) passing in the API address for starship 10, to fetch their corresponding pilot urls.
-The expected output are 4 pilot urls. 
+The expected output is 4 pilot urls. 
 
-![image](https://github.com/Muhammad-Nawaz/Star_Wars_Project/assets/65783110/7f0a13fe-a20a-421f-b803-ef5c05b7afc2)
+![image](https://github.com/Muhammad-Nawaz/Star_Wars_Project/assets/65783110/e42d6beb-e527-4b4f-90e0-022218a75677)
+
 
 
 
@@ -117,23 +120,23 @@ Objectives were outlined in the README, and preparations for the project present
 
 User stories:
 (The user stories can be found on our Kanban board on Trello here: https://trello.com/b/4j8cJPBL/star-wars)
-User Story 1: We were able to secure an API connection to retrieve the star wars starships information through unit testing 1, test_get_ship.
+User Story 1: We were able to secure an API connection to retrieve the star wars starships information through unit testing 1 - test_get_ship.
 
-User story 2: We were able to update the MongoDB database with current starship information through the unit testing 6, test_insert_mongo.
+User story 2: We were able to update the MongoDB database with current starship information through the unit testing 6 - test_insert_mongo.
 
-User story 3: We were able to view the full list of starship data 
+User story 3: We were able to view the full list of starship data using unit testing 1 - test_get_ship.
 
-User story 6: We were able to search for the pilot(s) name(s) that are associated with a certain starship through the unit testing 2, test_get_pilots_names.
+User story 6: We were able to search for the pilot(s) name(s) that are associated with a certain starship through the unit testing 2 - test_get_pilots_names.
 
-User story 7: We were able to get a response where there are empty fields through using unit testing 3, test_get_no_pilots_names.
+User story 7: We were able to get a response where there are empty fields through using unit testing 3 - test_get_no_pilots_names.
 
 
 Team Compliance Of Agile & SCRUM
 - Use of a Kanban board with Trello (a tool used to manage the scrum framework): https://trello.com/b/4j8cJPBL/star-wars
-- scrum meetings and 3 sprints
-- updated the product backlog
-- created user stories on Trello and updated them with definition of done
-- sprint retrospective and a post metro retro (a tool for the agile framework to see what went well and what to improve on): https://metroretro.io/BOP1GIWEYZXF
+- Scrum meetings and 3 sprints
+- Updated the product backlog
+- Created user stories on Trello and updated them with definition of done
+- Sprint retrospective and a post metro retro (a tool for the agile framework to see what went well and what to improve on): https://metroretro.io/BOP1GIWEYZXF
 
 
 
