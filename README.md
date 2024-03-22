@@ -1,15 +1,25 @@
 # Star_Wars_Project
 
-A Sparta Global Data Engineering 401 mini project to pull data on all available starships from an online API. The "pilots" key contains URLs pointing to the characters who pilot the starship. This will be used to replace 'pilots' with a list of ObjectIDs from the characters collection in previously used MongoDB database, then the starships will be inserted into their own collection.
+![image](https://github.com/Muhammad-Nawaz/Star_Wars_Project/assets/65783110/aa2f384a-ef57-4cf0-87d1-11faeed62320)
+
 
 ## Table of Contents
+- [Introduction](###Introduction)
+- [How to run the project](###Howtoruntheproject)
 - [Documents](###Documents)
 - [Unit Testing](###UnitTesting)
-- [Contributing](#contributing)
-- [License](#license)
+- [Definition of Done](###DefinitionOfDone)
+- [Team Compliance Of Agile & SCRUM](###Agile&Scrum)
+- [Improvements](#Improvements)
 
 
+### Introduction
+The project is to extract the 'pilots' key from the starships' data, which comprises URLs pointing to the characters who pilot these vessels. We'll then seamlessly replace these URLs with a curated list of ObjectIDs retrieved from the characters collection within our MongoDB database. This enables us to conveniently access the pilots' ObjectID list directly from the MongoDB page. To ensure precision and reliability, we've implemented thorough unit tests to validate each step of the process, guaranteeing seamless execution without errors.
 
+
+### How to run the project
+ 
+The prerequisite libraries needed for the project are pymongo and requests. To run the project, we Git cloned our respository onto our local machines, and performed Git Pull to get the latest version of the project and to run the main.py file. We decided to produce this code in an OOP format, so the code would be well organized and link seamlessly with the Test coding. To run this program, we used the URL from the Star Wars website "swapi" to attain the data for the Starships and set this under the 'class' Starwars. We initialized this and wrote code to store the information in JSON format. The program then iterates through the information and then inserts each document into the MongoDB database.
 
 
 ### Documents: 
@@ -18,6 +28,7 @@ swapi_oop.py - Main file including the classes that will fetch starship data and
 
 swapi_test.py - Implementations of unit testing.
 
+main.py - The main file to initiate the swapi_oop.py file
 
 
 
@@ -29,33 +40,40 @@ The team collaboratively designed unit tests to ensure the functionality of the 
 A test that uses the get_pilots method (from the swapi_oop.py file) passing in the API address for starship 10. 
 The expected output is identified through looking at the starship name online e.g. "Millenium Falcon".
 
+![image](https://github.com/Muhammad-Nawaz/Star_Wars_Project/assets/65783110/95fc4069-3959-4099-8f38-0740e11f6fae)
 
-2. test_get_pilots_names
+
+2. A test that uses the get_pilots method (from the swapi_oop.py file) passing in the API address for starship 10, to fetch their corresponding pilot urls.
+The expected output are 4 pilot urls. 
+
+![image](https://github.com/Muhammad-Nawaz/Star_Wars_Project/assets/65783110/7f0a13fe-a20a-421f-b803-ef5c05b7afc2)
+
+
+
+3. test_get_pilots_names
 A test that uses the get_pilots method (from the swapi_oop.py file) passing in the API address for starship 10, to fetch their corresponding pilot urls.
 The expected output are 4 pilot urls. 
 
 
-3. test_get_no_pilots_names
+4. test_get_no_pilots_names
 A test that uses the get_pilots method (from the swapi_oop.py file) passing in the API address for starship 9 and searches for the pilot url(s), which has no records.
 The expected output is an empty list. 
 
 
 
-4. test_get_non_existent_starship
+5. test_get_non_existent_starship
 A test that uses the get_pilots method (from the swapi_oop.py file) passing in the API address for starship 1, which has no record.
 The expected output is a library {'detail': 'Not found'}. 
 
 
 
-5. test_get_pilots_id
+6. test_get_pilots_id
 A test that uses the get_pilots_id() method (from the swapi_oop.py file) passing in the API address for starship 12 and returns the ids for each of the coreesponding pilots.
 The expected output is are the ObjectIds in the format {'_id': ObjectId('65f9a9a044466c62a7acc2cb')}.
 
 
 
-6. test_insert_mongo
-A test that searches for the information of a starhip to confirm that the starship information has been imported into the mongodb datase. In this example, ("X-wing") is used. 
-The expected output is a library with the corresponding "X-wing" information.
+
 
 
 
@@ -92,6 +110,7 @@ User stories were created.
 Second Sprint:
 The scrum master initialized the repository, and collaborative coding commenced.
 A README file was added to document project details.
+
 Third Sprint:
 Following communication with the client, a more detailed project plan was established.
 Objectives were outlined in the README, and preparations for the project presentation began.
@@ -107,12 +126,23 @@ User story 3: We were able to view the full list of starship data
 User story 6: We were able to search for the pilot(s) name(s) that are associated with a certain starship through the unit testing 2, test_get_pilots_names.
 
 User story 7: We were able to get a response where there are empty fields through using unit testing 3, test_get_no_pilots_names.
- 
 
-### Improvement:
+
+Team Compliance Of Agile & SCRUM
+- Use of a Kanban board with Trello (a tool used to manage the scrum framework): https://trello.com/b/4j8cJPBL/star-wars
+- scrum meetings and 3 sprints
+- updated the product backlog
+- created user stories on Trello and updated them with definition of done
+- sprint retrospective and a post metro retro (a tool for the agile framework to see what went well and what to improve on): https://metroretro.io/BOP1GIWEYZXF
+
+
+
+
+### Improvements:
 1. Testing: Expand test coverage by writing additional unit tests to validate the behavior of the Starwars class under various scenarios. Consider implementing automated testing to catch regressions and ensure reliability.
 2. Practice: Need more practice for unittest.
-3.  Refactoring: Regularly review the codebase to identify areas for improvement, such as simplifying complex functions, removing duplicated code, or optimizing performance.
+3. Add in the additional functionality of User stories 4,5 & 8 (these were non-essential).
+4.  Refactoring: Regularly review the codebase to identify areas for improvement, such as simplifying complex functions, removing duplicated code, or optimizing performance.
 
 
 
