@@ -100,7 +100,7 @@ This method inserts the starship data fetched from the Star Wars API into the Mo
 
 
 
-### Definitaion of Done:
+### Definition of Done:
  
 Project:
 Our project objective is to establish a connection to the Starwars API for accessing information about starships. Specifically, we aim to retrieve pilot IDs based on the starship name using MongoDB.
